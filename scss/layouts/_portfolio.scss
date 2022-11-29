@@ -1,0 +1,78 @@
+// buttons
+.buttons-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+
+  &__item:not(:last-child) {
+    margin-right: 8px;
+  }
+}
+
+// card set
+
+.cards-set {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -30px;
+  margin-left: -30px;
+}
+.cards-set__item {
+  margin-top: 30px;
+  margin-left: 30px;
+  max-width: calc(100% / 3 - 30px);
+}
+.card-thumb {
+  display: block;
+  @include transition(box-shadow);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
+.card-thumb__content {
+  padding: 20px 24px;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.card-thumb__subtitle {
+  @extend .subtitle;
+  @include fonts(700, 18px, 2, 0.06em);
+}
+
+.card-thumb__description {
+  @extend .description;
+  line-height: 1.88;
+}
+
+.card-thumb__wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-thumb__overlay {
+  @include fonts(400, 18px, 1.56, 0.03em);
+
+  color: getColor('main-white');
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  max-width: 100%;
+  padding: 24px;
+  @include flexCentered;
+  transform: translateY(100%);
+
+  background-color: getColor('layout');
+
+  @include transition(transform);
+
+  .card-thumb:hover & {
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,29 @@
+$main-font: 'Roboto', sans-serif;
+$secondary-font: 'Raleway', sans-serif;
+$timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+$colors: (
+  'primary-text': #212121,
+  'secondary-text': #757575,
+  'accent': #2196f3,
+  'bg-color': #f5f4fa,
+  'bg-accent': #f5f4fa,
+  'main-white': #fff,
+  'logo-black': #000000,
+  'logo-svg': #afb1b8,
+  'footer-bg': #2f303a,
+  'button-hover': #188ce8,
+  'soc-med-link': rgba(255, 255, 255, 0.1),
+  'works-overlay': rgba(47, 48, 58, 0.8),
+  'address-link': rgba(255, 255, 255, 0.6),
+  'modal-backdrop': rgba(0, 0, 0, 0.2),
+  'modal-input': rgba(33, 33, 33, 0.2),
+  'placeholder': rgba(117, 117, 117, 0.5),
+  'header-line': #ececec,
+  'layout': rgba(33, 150, 243, 0.9),
+);
+
+@function getColor($key) {
+  @return map-get($colors, $key);
+}
+
+//color: getColor('primary');

@@ -1,0 +1,34 @@
+.social-media {
+  display: flex;
+  gap: 10px;
+
+  .team__content & {
+    justify-content: center;
+  }
+}
+.social-media__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: getColor('soc-med-link');
+  color: getColor('main-white');
+  @include transition(background-color);
+
+  &:hover,
+  &:focus {
+    background-color: getColor('accent');
+  }
+
+  .team__content & {
+    color: getColor('logo-svg');
+    transition: color 250ms $timing-function, background-color 250ms $timing-function;
+  }
+
+  .team__content &:hover,
+  .team__content &:focus {
+    color: getColor('main-white');
+  }
+}

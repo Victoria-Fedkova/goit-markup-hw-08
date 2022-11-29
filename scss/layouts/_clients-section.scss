@@ -1,0 +1,21 @@
+.clients__title {
+  @extend .title;
+}
+.clients__list {
+  display: flex;
+  gap: 30px;
+}
+.clients__link {
+  @include flexCentered;
+  width: 170px;
+  height: 92px;
+  border: 1px solid getColor('logo-svg');
+  border-radius: 4px;
+  color: getColor('logo-svg');
+  transition: color 250ms $timing-function, border-color 250ms $timing-function;
+  &:hover,
+  &:focus {
+    color: getColor('accent');
+    border-color: getColor('accent');
+  }
+}

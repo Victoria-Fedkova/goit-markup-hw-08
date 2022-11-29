@@ -1,0 +1,71 @@
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+
+  font-family: $main-font;
+  font-style: normal;
+
+  @include fonts(400, 14px, 1.71, 0.03em);
+
+  color: getColor('primary-text-color');
+
+  background-color: getColor('main-white');
+}
+// Utility classes
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.section {
+  padding: 94px 0;
+}
+.section--has-bg {
+  background-color: getColor('bg-color');
+}
+.list {
+  list-style: none;
+}
+.link {
+  text-decoration: none;
+  color: inherit;
+  font-style: normal;
+
+  @include fonts(500, 14px, 1.14, 0.02em);
+
+  @include transition(color);
+}
+
+.title {
+  text-align: center;
+  @include fonts(700, 36px, 1.17, 0.03em);
+  margin-bottom: 50px;
+}
+
+.subtitle {
+  @include fonts(700, 14px, 1.14, 0.03em);
+
+  margin-bottom: 10px;
+}
+.description {
+  color: getColor('secondary-text');
+  font-size: 16px;
+  line-height: 1.2;
+}
+.icon {
+  fill: currentColor;
+}

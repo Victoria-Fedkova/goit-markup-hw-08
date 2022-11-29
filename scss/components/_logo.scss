@@ -1,0 +1,24 @@
+.logo {
+  display: inline-block;
+  font-family: $secondary-font;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+}
+.site-nav__logo,
+.footer__logo {
+  @extend .logo;
+
+  &--accent {
+    color: getColor('accent');
+  }
+}
+.site-nav__logo {
+  color: getColor('logo-black');
+  margin-right: 93px;
+}
+.footer__logo {
+  color: getColor('main-white');
+  margin-bottom: 20px;
+}

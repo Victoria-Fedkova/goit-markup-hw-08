@@ -1,0 +1,51 @@
+.button {
+  width: 200px;
+  height: 50px;
+
+  @include flexCentered;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+
+  transition: color 250ms $timing-function, background-color 250ms $timing-function,
+    box-shadow 250ms $timing-function;
+}
+
+.button--primary,
+.formfield__button {
+  @extend .button;
+
+  background-color: getColor('accent');
+  color: getColor('main-white');
+
+  &:active,
+  &:hover,
+  &:focus {
+    background-color: getColor('button-hover');
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.buttons-list__button {
+  @extend .button;
+  display: inline-flex;
+  padding: 6px 22px;
+  width: auto;
+  height: auto;
+  color: getColor('primary-text');
+  background-color: getColor('bg-color');
+  border-color: getColor('bg-color');
+  &:active,
+  &:hover,
+  &:focus {
+    background-color: getColor('accent');
+    color: getColor('main-white');
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+}
