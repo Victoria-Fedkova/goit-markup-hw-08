@@ -5,6 +5,11 @@
   .team__content & {
     justify-content: center;
   }
+  @media screen and (max-width: 1199px) {
+    .footer__social-media & {
+      justify-content: center;
+    }
+  }
 }
 .social-media__link {
   display: flex;

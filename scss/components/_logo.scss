@@ -16,7 +16,17 @@
 }
 .site-nav__logo {
   color: getColor('logo-black');
-  margin-right: 93px;
+
+  @media screen and(max-width:767px) {
+    padding: 16px 0;
+  }
+  @media screen and (min-width: 768px) {
+    margin-right: 87px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+  }
 }
 .footer__logo {
   color: getColor('main-white');

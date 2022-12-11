@@ -8,8 +8,10 @@ li {
   padding: 0;
 }
 img {
+  width: 100%;
   max-width: 100%;
   display: block;
+  height: auto;
 }
 body {
   min-height: 100vh;
@@ -25,14 +27,33 @@ body {
 
   background-color: getColor('main-white');
 }
+
+body.modal-open {
+  overflow: hidden;
+}
 // Utility classes
 .container {
-  max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
 }
 .section {
-  padding: 94px 0;
+  @media screen and (max-width: 1199px) {
+    padding: 60px 0;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 94px 0;
+  }
 }
 .section--has-bg {
   background-color: getColor('bg-color');
