@@ -43,13 +43,7 @@
     display: none;
   }
 }
-// .navigation.is-open {
-//   @media screen and (max-width: 767px) {
-//     flex-direction: column;
-//     }
-//   }
 
-// }
 .site-nav {
   @media screen and (max-width: 767px) {
     &__item:not(:last-child) {
